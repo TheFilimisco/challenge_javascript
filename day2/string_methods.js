@@ -7,27 +7,22 @@ let first_name = "Stephen";
 console.log(firstName.length); // 6
 
 // toUpperCase
-
 let string = "JavaScript";
 console.log(string.toUpperCase()); // JAVASCRIPT
 
 // toLowerCase
-
 let string_toLowerCase = "JavaScript";
 console.log(string_toLowerCase.toLowerCase()); // javascript
 
 // substr
-
 let string_substr = "JavaScript";
 console.log(string_substr.substr(4, 6)); // Script
 
 // substring
-
 let string_substring = "JavaScript";
 console.log(string_substring.substring(4, 10)); // Script
 
 // split
-
 let string_split = "JavaScript";
 console.log(string_split.split("")); // ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
 
@@ -36,24 +31,20 @@ let countries = "Finland, Sweden, Norway, Denmark, and Iceland";
 console.log(countries.split(",")); // ["Finland", " Sweden", " Norway", " Denmark", " and Iceland"]
 
 // trim
-
 let string_trim = "   JavaScript   ";
 console.log(string_trim.trim()); // JavaScript
 
 // includes
 let string_includes = "30 Days Of JavaScript";
-
 console.log(string_includes.includes("Days")); // true
 console.log(string_includes.includes("days")); // false - it is case sensitive!
 console.log(string_includes.includes("Script")); // true
 console.log(string_includes.includes("script")); // false
 console.log(string_includes.includes("java")); // false
 console.log(string_includes.includes("Java")); // true
-
 // replace
 
 /* string.replace(oldsubstring, newsubstring); */
-
 let new_string = "30 Days Of JavaScript";
 console.log(new_string);
 console.log(new_string.replace("JavaScript", "Python")); // 30 Days Of Python
@@ -62,7 +53,6 @@ console.log(new_string);
 // charAt()
 
 /* string.charAt(index) */
-
 let string_charat = "30 Days Of JavaScript";
 console.log(string_charat.charAt(0)); // 3
 
