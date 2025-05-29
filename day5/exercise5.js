@@ -50,3 +50,21 @@ if (countries.includes(country)){
     console.log(`Not exist ${country}`);
 }
 
+function CamelCase(str) { 
+  let pattern = /[- *%]/;
+  let newStr = str.split(pattern)
+  let result = []
+
+  for (const word of newStr) {
+    if (word.length === 0) {
+        let newWord = word[0].toUpperCase( ) + word.slice(1).toLowerCase();
+        result.push(newWord);
+    }
+  }
+
+  // code goes here  
+  return result.join(''); 
+}
+   
+// keep this function call here 
+console.log(CamelCase(readline()));
