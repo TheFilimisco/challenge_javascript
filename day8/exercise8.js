@@ -1,20 +1,18 @@
 /* Level 1 */
 
-import {users} from './listUsers.js';
-import {products} from './products.js';
-
+import { users } from "./listUsers.js";
+import { products } from "./products.js";
 
 //1 Create an empty object called dog
 
-const dog = {
-};
+const dog = {};
 
 console.log(dog);
 
-dog.name = 'Toby';
+dog.name = "Toby";
 dog.age = 12;
-dog.bark = function() {
-     return `woof woof`;
+dog.bark = function () {
+  return `woof woof`;
 };
 /* dog = {
     name: 'Toby',
@@ -26,26 +24,23 @@ dog.bark = function() {
 console.log(dog);
 console.log(dog.bark());
 
-
 console.log(dog.name);
 console.log(dog.age);
 
 // Setting
 
-dog.name = 'Toby2';
+dog.name = "Toby2";
 dog.age = 20;
-dog.bark = function() {
-    return `woof`;
+dog.bark = function () {
+  return `woof`;
 };
 
 console.log(dog);
 console.log(dog.bark());
 
-
 // Users
-console.log("================Users================")
+console.log("================Users================");
 /* console.log(users); */
-
 
 let maxSkills = -99999999999999;
 let userWithManySkills = "";
@@ -67,14 +62,12 @@ const valuesOfUsers = Object.values(users);
 console.log('With skills: ', maxSkills);
  */
 
-
 // Set your name in the users object  without modifying the original users object
 
-const copyOfValuesOfUsers = Object.assign({},valuesOfUsers);
-copyOfValuesOfUsers.name = 'Steven';
+const copyOfValuesOfUsers = Object.assign({}, valuesOfUsers);
+copyOfValuesOfUsers.name = "Steven";
 /* 
 console.log(copyOfValuesOfUsers); */
-
 
 const keyOfValuesOfUsers = Object.keys(valuesOfUsers);
 /* console.log(keyOfValuesOfUsers); */
@@ -91,31 +84,31 @@ Incomes is a set of incomes and its description and expenses is a set of incomes
 
 /* This Object Complete */
 const personAccount = {
-    firstname : 'Steven',
-    lastName : 'Uriarte',
-    incomes : 0,
-    expenses: 0,
-    totalExpense: function (){
-        console.log(`Total Expense: ${this.totalExpense}`);
-    },
-    accountInfo : function () {
-        console.log(`Your info is ${this.firstname} and ${this.lastName}`);
-    },
-    addIncome: function (amount) {
-        this.incomes+=amount
-        console.log(`Add income: ${amount}`);
-    },
-    addExpense : function (amount) {
-         this.expenses+=amount
-         console.log(`Add expense: ${amount}`);
-    },
-    accountBalance : function (){
-        console.log(`Your Balance`);
-        console.log(`Your incomes ${this.incomes}`);
-        console.log(`Your expense ${this.expenses}`);
-        console.log(`Your Balance ${this.incomes - this.expenses}`);
-    }
-}
+  firstname: "Steven",
+  lastName: "Uriarte",
+  incomes: 0,
+  expenses: 0,
+  totalExpense: function () {
+    console.log(`Total Expense: ${this.totalExpense}`);
+  },
+  accountInfo: function () {
+    console.log(`Your info is ${this.firstname} and ${this.lastName}`);
+  },
+  addIncome: function (amount) {
+    this.incomes += amount;
+    console.log(`Add income: ${amount}`);
+  },
+  addExpense: function (amount) {
+    this.expenses += amount;
+    console.log(`Add expense: ${amount}`);
+  },
+  accountBalance: function () {
+    console.log(`Your Balance`);
+    console.log(`Your incomes ${this.incomes}`);
+    console.log(`Your expense ${this.expenses}`);
+    console.log(`Your Balance ${this.incomes - this.expenses}`);
+  },
+};
 
 console.log(personAccount.accountInfo());
 console.log(personAccount.accountBalance());
@@ -127,18 +120,38 @@ personAccount.addExpense(10);
 console.log(personAccount.accountInfo());
 console.log(personAccount.accountBalance());
 
-
 // Questions 2
 
+const signUp = (user) => {
+  for (const item of users) {
+    if (user.email === item.email) {
+      return `This user is Registerd`;
+    }
+  }
+  users.push(user);
+  return `User added: ${user._id}`;
+};
 
+console.log(
+  signUp({
+    _id: "ab12ex",
+    username: "Alex",
+    email: "alex@alex.com",
+    password: "123123",
+    createdAt: "08/01/2020 9:00 AM",
+    isLoggedIn: false,
+  })
+);
+
+console.log(
+  signUp({
+    _id: "ab12ex",
+    username: "Alex",
+    email: "alex@alex111.com",
+    password: "123123",
+    createdAt: "08/01/2020 9:00 AM",
+    isLoggedIn: false,
+  })
+);
 
 console.log(users);
-console.log(products);
-
-
-
-
-
-
-
-
